@@ -18,7 +18,8 @@ class Router
     {
         $this->routes[$pattern] = [
             'controller' => $controllerClass,
-            'method' => $method
+            'method' => $method,
+            
         ];
     }
 
