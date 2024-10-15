@@ -1,6 +1,8 @@
 <?php
 require "vendor/autoload.php";
 
+use App\Controllers\PokemonController;
+use App\Models\Pokemon;
 use Config\Router;
 
 $router = new Router();
@@ -9,5 +11,6 @@ $router = new Router();
  *  cette methode prends trois argument, la route, le controller et la methode executé
  */
 $router->addRoute('/', 'HomeController', 'index');
+$router->addRoute('/create', 'PokemonController', 'addPokemon');
 
 $router->handleRequest();
